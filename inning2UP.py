@@ -30,9 +30,7 @@ def inning2UP():
     pag.leftClick(x2BTN[0], y2BTN, duration=1)
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=1)
     pag.leftClick(xnumbers[6], ynumbers, duration=1)
-    pag.mouseDown(xBASE[2], yBASE[2], button="left")
-    pag.moveTo(xBASE[3], yBASE[3], duration=1)
-    pag.mouseUp()
+    moveTO_4()
     done()
     done()
     # 4

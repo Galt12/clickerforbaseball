@@ -1,11 +1,13 @@
 import pyautogui as pag
 def deleteall():
-    count = 0
+    
     x1 = 295
     y1 =777
-    while count <40:
+    for count in range (1, 15):
         pag.leftClick(x1, y1, duration=0.5)
-        count += 1
-        print(count)
+        if count % 10 == 0:
+            print(count)
         
 deleteall()
+
+# 150

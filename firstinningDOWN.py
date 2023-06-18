@@ -26,9 +26,8 @@ def firstinningDOWN():
     outon1base()
     pag.leftClick(x2BTN[1], y2BTN, duration=1)
     pag.leftClick(xnumbers[7], ynumbers, duration=1)
-    pag.mouseDown(xBASE[2], yBASE[2])
-    pag.moveTo(xBASE[3], yBASE[3], duration=2)
-    pag.mouseUp()
+    moveTO_3()
+    done()
     done()
     done()
     # 4
@@ -38,7 +37,7 @@ def firstinningDOWN():
     ball()
     foul()
     ball()
-    # 5
+    5
     pickoff1()
     ballStolenBase2()
     outon1base()

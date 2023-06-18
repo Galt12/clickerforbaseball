@@ -1,7 +1,9 @@
 import pyautogui as pag
-x = 515
-y =349
-
+# ДОМ
+xhome = 511
+yhome = 352
+# Длительность движений мыши. Зависит от возможностей системы
+d = 1.4
 # цифры аутов или хитов
 xnumbers = [580, 605, 630, 655, 680, 705, 730, 755, 780] 
 ynumbers = 430
@@ -13,72 +15,156 @@ yFIRSTBUTTON = 480
 # второвй ряд кнопок
 x2BTN = [150, 250, 350, 450, 550]
 y2BTN = 520
+single = pag.leftClick(x2BTN[0], y2BTN, duration=d)
+# третий ряд кнопок
+x3BTN = [150, 250, 350, 450, 550]
+y3BTN = 570
+
+# четверный ряд кнопок
+x4BTN = [150, 250, 350, 450, 550]
+y4BTN = 610
 
 
 # координаты баз, БЕЗ ДОМА!!!!!
-xBASE =[712, 509, 300, 427, 603]
-yBASE = [260, 215, 267, 407, 411]
+xBASE =[712, 509, 294, 440, 603]
+yBASE = [260, 215, 250, 388, 411]
 
 # координаты аутов 
-xOUT =[667]
-yOUT = [342]
+xOUT =[667,630, 373, 327]
+yOUT = [342,238, 276, 361]
 def done():
     x1 = 95
     y1 =735
-    pag.leftClick(x1, y1)
+    pag.leftClick(x1, y1, duration=d)
 def onebasehit():
-    pag.mouseDown(x, y, button='left')
-    pag.moveTo(xBASE[0], yBASE[0], 2)
+    pag.mouseDown(xhome, yhome, button='left')
+    pag.moveTo(xBASE[0], yBASE[0], d)
     pag.mouseUp()
 
 def twobasehit():
-    pag.mouseDown(x, y, button='left')
-    pag.moveTo(xBASE[1], yBASE[1], 2)
+    pag.mouseDown(xhome, yhome, button='left')
+    pag.moveTo(xBASE[1], yBASE[1], d)
     pag.mouseUp()
+
 def threebasehit():
-    pag.mouseDown(x, y, button='left')
-    pag.moveTo(xBASE[2], yBASE[2], 2)
+    pag.mouseDown(xhome, yhome, button='left')
+    pag.moveTo(xBASE[2], yBASE[2], d)
     pag.mouseUp()
 
 def homerun():
-    pag.mouseDown(x, y, button='left')
-    pag.moveTo(xBASE[3], yBASE[3], 1)
+    pag.mouseDown(xhome, yhome, button='left')
+    pag.moveTo(xBASE[3], yBASE[3], d)
     pag.mouseUp()
 
 def outon1base():
-    pag.mouseDown(x, y, button='left')
-    pag.moveTo(xOUT[0], yOUT[0], 1)
+    pag.mouseDown(xhome, yhome, button='left')
+    pag.moveTo(xOUT[0], yOUT[0], d)
     pag.mouseUp()
 
 def ball():
-    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=0.5)
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
     done()
 
 def ballStolenBase2():
-    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=0.5)
-    pag.mouseDown(xBASE[0], yBASE[0], button= "left")
-    pag.moveTo(xBASE[1], yBASE[1], 2)
-    pag.mouseUp()
-    pag.leftClick(x2BTN[0], y2BTN, duration=1)
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_2()
+    pag.leftClick(x2BTN[0], y2BTN, duration=d)
+    pag.leftClick(x3BTN[0], y3BTN, duration=d)
     done()
 
-def swing():
-    pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=1)
+def ballStolenBase3():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_3()
+    pag.leftClick(x2BTN[0], y2BTN, duration=d)
+    pag.leftClick(x3BTN[0], y3BTN, duration=d)
     done()
+
+def ballWildPitch2():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_2()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
+    pag.leftClick(x3BTN[0], y3BTN, duration=d)
+    done()
+
+def ballWildPitch3():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_3()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
+    pag.leftClick(x3BTN[0], y3BTN, duration=d)
+    done()
+
+def ballWildPitch4():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_4()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
+    pag.leftClick(x3BTN[0], y3BTN, duration=d)
+    done()
+
+def ballWildPitch_2_4():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_2()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
+    pag.leftClick(x3BTN[0], y3BTN, duration=d)
+    moveTO_4()
+    done()
+
+
+def swing():
+    pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=d)
+    done()
+
+def swingpastball():
+    pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=d)
+    pag.mouseDown(xOUT[0],yOUT[0], button = 'left')
+    pag.moveTo(xBASE[0], yBASE[0], duration=d)
+    pag.mouseUp()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
 
 def kstrike():
     pag.leftClick(xFIRSTBUTTON[2], yFIRSTBUTTON, duration=1)
     done()
 
-def KStolenBase3():
+def KStolenBase2():
     pag.leftClick(xFIRSTBUTTON[2], yFIRSTBUTTON, duration=1)
-    pag.mouseDown(xBASE[1], yBASE[1], button= "left")
-    pag.moveTo(xBASE[2], yBASE[2], 2)
-    pag.mouseUp()
+    moveTO_2()
     pag.leftClick(x2BTN[0], y2BTN, duration=1)
     done()
 
+def K_SB_2_e2T():
+    pag.leftClick(xFIRSTBUTTON[2], yFIRSTBUTTON, duration=1)
+    moveTO_2()
+    moveTO_3()
+    pag.leftClick(x2BTN[0], y2BTN, duration=1)
+    pag.leftClick(x3BTN[2],y3BTN, duration=d)
+    pag.leftClick(x4BTN[2], y4BTN, duration=d )
+    done()
 
+def KStolenBase3():
+    pag.leftClick(xFIRSTBUTTON[2], yFIRSTBUTTON, duration=1)
+    moveTO_3()
+    pag.leftClick(x2BTN[0], y2BTN, duration=1)
+    done()
+
+def ballPastBall2():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_2()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
+    pag.leftClick(x3BTN[1], y3BTN, duration=d)
+    done()
+
+def ballPastBall3():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_3()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
+    pag.leftClick(x3BTN[1], y3BTN, duration=d)
+    done()
+
+def ballPastBall4():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_4()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
+    pag.leftClick(x3BTN[1], y3BTN, duration=d)
+    done()
 
 def foul():
     pag.leftClick(xFIRSTBUTTON[3], yFIRSTBUTTON, duration=1)
@@ -92,3 +178,29 @@ def pickoff1():
     pag.leftClick(xBASE[0], yBASE[0], duration=1)
     pag.leftClick(x2BTN[0], y2BTN)
     done()
+
+def pickoff2():
+    pag.leftClick(xBASE[1], yBASE[1], duration=1)
+    pag.leftClick(x2BTN[0], y2BTN)
+    done()
+
+
+def pickoff3():
+    pag.leftClick(xBASE[2], yBASE[2], duration=1)
+    pag.leftClick(x2BTN[0], y2BTN)
+    done()
+
+def moveTO_2():
+    pag.mouseDown(xBASE[0], yBASE[0], button= "left")
+    pag.moveTo(xBASE[1], yBASE[1], d)
+    pag.mouseUp()
+
+def moveTO_3():
+    pag.mouseDown(xBASE[1], yBASE[1], button= "left")
+    pag.moveTo(xBASE[2], yBASE[2], d)
+    pag.mouseUp()
+
+def moveTO_4():
+    pag.mouseDown(xBASE[2], yBASE[2], button= "left")
+    pag.moveTo(xBASE[3], yBASE[3], d)
+    pag.mouseUp()
