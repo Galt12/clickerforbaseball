@@ -20,6 +20,7 @@ def inning4DOWN():
     foul()
     swing()
     ball()
+    done()
     twobasehit()
     pag.leftClick(x2BTN[1], y2BTN, duration=d)
     pag.leftClick(x3BTN[0], y3BTN, duration=d)
@@ -37,7 +38,8 @@ def inning4DOWN():
     onebasehit()
     pag.leftClick(x2BTN[0], y2BTN, duration=d)
     pag.leftClick(xnumbers[7], ynumbers, duration=d)
-    
+    done()
+
     # 3
     onebasehit()
 
@@ -53,11 +55,11 @@ def inning4DOWN():
     # 4
     ball()
     ball()
+    done()
     onebasehit()
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=d)
     pag.leftClick(x2BTN[0], y2BTN, duration=d)
     pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON, duration=d)
-
     pag.leftClick(xnumbers[7], ynumbers, duration=d)
     done()
     done()
@@ -67,6 +69,7 @@ def inning4DOWN():
     foul()
     ball()
     foul()
+    done()
     threebasehit()
     pag.leftClick(x2BTN[1], y2BTN, duration=d)
     pag.leftClick(x3BTN[0], y3BTN, duration=d)
@@ -93,5 +96,3 @@ def inning4DOWN():
     pag.leftClick(x2BTN[0], y2BTN, duration=d)
     pag.leftClick(xnumbers[2], ynumbers, duration=d)
     done()
-    
-    print("закончили низ 4")

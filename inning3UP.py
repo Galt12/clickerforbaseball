@@ -1,8 +1,6 @@
 import pyautogui as pag
 from set_button_and_game import *
 
-d = 1
-
 def inning3UP():
     # 5
     ball()

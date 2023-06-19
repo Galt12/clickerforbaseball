@@ -6,9 +6,9 @@ def inning2DOWN():
     kstrike()
     ball()
     outon1base()
-    pag.leftClick(x2BTN[0], y2BTN, duration=0.5)
-    pag.leftClick(xnumbers[3], ynumbers, duration=0.5)
-    pag.leftClick(xnumbers[2], ynumbers, duration=0.5)
+    pag.leftClick(x2BTN[0], y2BTN, duration=d)
+    pag.leftClick(xnumbers[3], ynumbers, duration=d)
+    pag.leftClick(xnumbers[2], ynumbers, duration=d)
 
     done()
     # 7

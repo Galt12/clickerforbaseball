@@ -3,7 +3,7 @@ import pyautogui as pag
 xhome = 511
 yhome = 352
 # Длительность движений мыши. Зависит от возможностей системы
-d = 1.4
+d = 2
 # цифры аутов или хитов
 xnumbers = [580, 605, 630, 655, 680, 705, 730, 755, 780] 
 ynumbers = 430
@@ -15,6 +15,7 @@ yFIRSTBUTTON = 480
 # второвй ряд кнопок
 x2BTN = [150, 250, 350, 450, 550]
 y2BTN = 520
+
 single = pag.leftClick(x2BTN[0], y2BTN, duration=d)
 # третий ряд кнопок
 x3BTN = [150, 250, 350, 450, 550]
@@ -24,10 +25,17 @@ y3BTN = 570
 x4BTN = [150, 250, 350, 450, 550]
 y4BTN = 610
 
+# пятый ряд кнопок
+x5BTN = [150, 250, 350, 450, 550]
+y5BTN = 650
+
+# шестой ряд кнопок
+x6BTN = [150, 250, 350, 450, 550]
+y6BTN = 610
 
 # координаты баз, БЕЗ ДОМА!!!!!
-xBASE =[712, 509, 294, 440, 603]
-yBASE = [260, 215, 250, 388, 411]
+xBASE =[712, 509, 291, 440, 603]
+yBASE = [260, 215, 258, 388, 411]
 
 # координаты аутов 
 xOUT =[667,630, 373, 327]
@@ -108,10 +116,24 @@ def ballWildPitch_2_4():
     moveTO_4()
     done()
 
+def B_e2T_3():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_3()
+    pag.leftClick(x2BTN[2], y2BTN, duration=d)
+    pag.leftClick(x3BTN[3], y3BTN, duration=d)
+    done()
+
 
 def swing():
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=d)
     done()
+
+def S_SB_2():
+    pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=1)
+    moveTO_2()
+    pag.leftClick(x2BTN[0], y2BTN, duration=1)
+    done()
+
 
 def swingpastball():
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=d)
@@ -143,6 +165,13 @@ def KStolenBase3():
     pag.leftClick(xFIRSTBUTTON[2], yFIRSTBUTTON, duration=1)
     moveTO_3()
     pag.leftClick(x2BTN[0], y2BTN, duration=1)
+    done()
+
+def K_PB_3():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
+    moveTO_3()
+    pag.leftClick(x2BTN[3], y2BTN, duration=d)
+    pag.leftClick(x3BTN[1], y3BTN, duration=d)
     done()
 
 def ballPastBall2():

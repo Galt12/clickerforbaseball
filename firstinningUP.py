@@ -1,13 +1,12 @@
 import pyautogui as pag
 from set_button_and_game import *
-d = 2
 def firstinningUP():
     # 1 бьющий
     kstrike()
     ball()
     outon1base()
-    pag.leftClick(x2BTN[1], y2BTN, duration=1)
-    pag.leftClick(xnumbers[7], ynumbers, duration=1)
+    pag.leftClick(x2BTN[1], y2BTN, duration=d)
+    pag.leftClick(xnumbers[7], ynumbers, duration=d)
     done()
 
     # # 2 бьющий
@@ -22,7 +21,7 @@ def firstinningUP():
     pag.leftClick(x2BTN[0], y2BTN, duration=d)
     pag.leftClick(xnumbers[6], ynumbers, duration=d)
     pag.leftClick(x3BTN[1], y3BTN, duration=d)
-    pag.leftClick(x4BTN[3], y4BTN, duration=2)
+    pag.leftClick(x4BTN[3], y4BTN, duration=d)
     done()
     done()
     # 4 бьющий
@@ -48,8 +47,8 @@ def firstinningUP():
     ball()
     foul()
     onebasehit()
-    pag.leftClick(x2BTN[0], y2BTN, duration=1)
-    pag.leftClick(xnumbers[7], ynumbers, duration=1)
+    pag.leftClick(x2BTN[0], y2BTN, duration=d)
+    pag.leftClick(xnumbers[7], ynumbers, duration=d)
     done()
     done()
     # 8 (аут бегуну в дом)
