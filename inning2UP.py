@@ -39,5 +39,3 @@ def inning2UP():
     pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=d)
     pag.leftClick(xnumbers[4], ynumbers, duration=d)
     done()
-
-    print('верх 2')

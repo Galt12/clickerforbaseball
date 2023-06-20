@@ -16,13 +16,17 @@ def inning7UP():
     # 2
     kstrike()
     B_e2T_3()
+    done()
     ball()
     ball()
     ball()
     done()
 
     # 3
-    KStolenBase2()
+    done()
+    K_SB2_full_is_3()
+    
+    done()
     ball()
     ball()
     foul()
@@ -60,7 +64,7 @@ def inning7UP():
     onebasehit()
     pag.leftClick(x2BTN[0], y2BTN,0,d)
     pag.leftClick(xnumbers[3], ynumbers, 0,d)  
-    pag.mouseDown(xBASE[2], yBASE[2], 0,d)
+    pag.mouseDown(xBASE[2], yBASE[2],'left',d)
     pag.moveTo(xBASE[1], yBASE[1],0,d)
     pag.mouseUp()
     done()  
@@ -71,8 +75,10 @@ def inning7UP():
     onebasehit()
     pag.leftClick(xFIRSTBUTTON[2], yFIRSTBUTTON,0,d)
     pag.leftClick(x2BTN[0], y2BTN,0,d)
+    pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON,0,d)
     pag.leftClick(xnumbers[6], ynumbers, 0,d)  
-
+    done()
+    done()
     # 7
     swing()
     ball()
@@ -82,22 +88,23 @@ def inning7UP():
     done()
     onebasehit()
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON,0,d)
-    pag.leftClick(xFIRSTBUTTON[3], yFIRSTBUTTON,0,d)
     pag.leftClick(x2BTN[0], y2BTN,0,d)
+    pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON,0,d) 
     pag.leftClick(xnumbers[8], ynumbers, 0,d)  
 
     done()
     done()
 
-    # 8
+    8
     foul()
     swing()
     ball()
     done()
     onebasehit()
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON,0,d)
-    pag.leftClick(xFIRSTBUTTON[3], yFIRSTBUTTON,0,d)
-    pag.leftClick(x2BTN[0], y2BTN,0,d)
+    pag.leftClick(x2BTN[0], y2BTN,0,d)    
+    pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON,0,d)
+
     pag.leftClick(xnumbers[7], ynumbers, 0,d)  
 
     done()
@@ -117,10 +124,12 @@ def inning7UP():
     done()
     onebasehit()
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON,0,d)
-    pag.leftClick(xFIRSTBUTTON[3], yFIRSTBUTTON,0,d)
     pag.leftClick(x2BTN[0], y2BTN,0,d)
+    pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON,0,d)
+
     pag.leftClick(xnumbers[8], ynumbers, 0,d)  
     moveTO_3()
+    pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON,0,d)    
     done()
     done()
     done()
@@ -134,8 +143,9 @@ def inning7UP():
 
     onebasehit()
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON,0,d)
-    pag.leftClick(xFIRSTBUTTON[3], yFIRSTBUTTON,0,d)
     pag.leftClick(x2BTN[0], y2BTN,0,d)
+    pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON,0,d)
+
     pag.leftClick(xnumbers[4], ynumbers, 0,d)
 
     done()
@@ -157,13 +167,16 @@ def inning7UP():
 
     # 4
     pickoff1()
-    ballStolenBase2()
+    B_SB2_full_is_3()
     done()
     twobasehit()
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON,0,d)
-    pag.leftClick(xFIRSTBUTTON[3], yFIRSTBUTTON,0,d)
-    pag.leftClick(x2BTN[0], y2BTN,0,d)
+    pag.leftClick(x3BTN[0], y3BTN,0,d)
+    pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON,0,d)
+
     pag.leftClick(xnumbers[6], ynumbers, 0,d)
+    done()
+    done()
     done()
 
     # 5
@@ -176,7 +189,7 @@ def inning7UP():
     done()
 
     # 6
-    S_SB_2()
+    S_SB2_full_is_3()
     swing()
     foul()
     pickoff2()
@@ -189,13 +202,13 @@ def inning7UP():
     done()
 
     # 7
-    done()
+
     twobasehit()
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON,0,d)
-    pag.leftClick(xFIRSTBUTTON[3], yFIRSTBUTTON,0,d)
     pag.leftClick(x3BTN[0], y3BTN,0,d)
+    pag.leftClick(xFIRSTBUTTON[4], yFIRSTBUTTON,0,d)
     pag.leftClick(xnumbers[6], ynumbers, 0,d)
-    pag.leftClick(xnumbers[7], ynumbers, 0,d)
+    pag.leftClick(xnumbers[7], ynumbers,0,d)
     moveTO_4()
     done()
     done()
@@ -207,9 +220,9 @@ def inning7UP():
     pag.leftClick(x2BTN[0], y2BTN,0,d)
     pag.leftClick(xnumbers[0], ynumbers, 0,d)
     pag.leftClick(xnumbers[2], ynumbers, 0,d)
-
-    pag.mouseDown(xBASE[3],yBASE,0,d)
-    pag.moveTo(xOUT[3],yOUT[3],0,d)
+    moveTO_3()
+    pag.mouseDown(xBASE[2],yBASE[2],button='primary', duration=d)
+    pag.moveTo(xOUT[3],yOUT[3], d)
     pag.mouseUp()
 
     done()

@@ -2,7 +2,9 @@ import pyautogui as pag
 # ДОМ
 xhome = 511
 yhome = 352
-# Длительность движений мыши. Зависит от возможностей системы
+
+# Длительность движений мыши. Зависит от возможностей системы.
+# НЕ СТАВИТЬ РАВНЫМ 0. Программа не успеет!!!!
 d = 2
 # цифры аутов или хитов
 xnumbers = [580, 605, 630, 655, 680, 705, 730, 755, 780] 
@@ -34,8 +36,8 @@ x6BTN = [150, 250, 350, 450, 550]
 y6BTN = 610
 
 # координаты баз, БЕЗ ДОМА!!!!!
-xBASE =[712, 509, 291, 440, 603]
-yBASE = [260, 215, 258, 388, 411]
+xBASE =[712, 509, 292, 430, 603]
+yBASE = [260, 215, 259, 389, 411]
 
 # координаты аутов 
 xOUT =[667,630, 373, 327]
@@ -121,8 +123,15 @@ def B_e2T_3():
     moveTO_3()
     pag.leftClick(x2BTN[2], y2BTN, duration=d)
     pag.leftClick(x3BTN[3], y3BTN, duration=d)
+    pag.leftClick(xnumbers[1], ynumbers,0,d)
     done()
 
+def B_SB2_full_is_3():
+    pag.leftClick(xFIRSTBUTTON[0], yFIRSTBUTTON, duration=1)
+    moveTO_2()
+    pag.leftClick(x2BTN[0], y2BTN, duration=1)
+    pag.leftClick(x3BTN[0], y3BTN, duration=1)
+    done()
 
 def swing():
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=d)
@@ -134,6 +143,12 @@ def S_SB_2():
     pag.leftClick(x2BTN[0], y2BTN, duration=1)
     done()
 
+def S_SB2_full_is_3():
+    pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=1)
+    moveTO_2()
+    pag.leftClick(x2BTN[0], y2BTN, duration=1)
+    pag.leftClick(x3BTN[0], y3BTN, duration=1)
+    done()
 
 def swingpastball():
     pag.leftClick(xFIRSTBUTTON[1], yFIRSTBUTTON, duration=d)
@@ -159,6 +174,13 @@ def K_SB_2_e2T():
     pag.leftClick(x2BTN[0], y2BTN, duration=1)
     pag.leftClick(x3BTN[2],y3BTN, duration=d)
     pag.leftClick(x4BTN[2], y4BTN, duration=d )
+    done()
+
+def K_SB2_full_is_3():
+    pag.leftClick(xFIRSTBUTTON[2], yFIRSTBUTTON, duration=1)
+    moveTO_2()
+    pag.leftClick(x2BTN[0], y2BTN, duration=1)
+    pag.leftClick(x3BTN[0], y3BTN, duration=1)
     done()
 
 def KStolenBase3():
@@ -227,7 +249,7 @@ def moveTO_2():
 def moveTO_3():
     pag.mouseDown(xBASE[1], yBASE[1], button= "left")
     pag.moveTo(xBASE[2], yBASE[2], d)
-    pag.mouseUp()
+    pag.mouseUp(duration=d)
 
 def moveTO_4():
     pag.mouseDown(xBASE[2], yBASE[2], button= "left")

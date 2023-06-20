@@ -13,10 +13,11 @@ from inning5DOWN import inning5DOWN
 from inning6UP import inning6UP
 from inning6DOWN import inning6DOWN
 from inning7UP import inning7UP
-
+from inning7DOWN import inning7DOWN
 
 if __name__ == '__main__':
     for func in [ 
+                firstinningUP,
                 firstinningDOWN,
                 inning2UP,
                 inning2DOWN,
@@ -28,6 +29,7 @@ if __name__ == '__main__':
                 inning5DOWN, 
                 inning6UP, 
                 inning6DOWN,
-                inning7UP]:
+                inning7UP,   
+                inning7DOWN]:
         func()
         print(f"Закончили {func.__name__}!")
